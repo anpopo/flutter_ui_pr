@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_ui_pr/food_app/components/category_title.dart';
 import 'package:flutter_ui_pr/food_app/components/custom_menu_bar.dart';
 import 'package:flutter_ui_pr/food_app/components/food_card.dart';
 import 'package:flutter_ui_pr/food_app/consts/colors.dart';
+import 'package:flutter_ui_pr/food_app/screens/food_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 width: double.infinity,
                 child: SvgPicture.asset('assets/food_app/icons/search.svg'),
               ),
-              const SingleChildScrollView(
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -86,6 +86,13 @@ class HomeScreen extends StatelessWidget {
                       image: 'assets/food_app/images/image_1.png',
                       kcal: 420,
                       price: 20,
+                      onClick: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<FoodDetailScreen>(
+                            builder: (ctx) => const FoodDetailScreen(),
+                          ),
+                        );
+                      },
                     ),
                     FoodCard(
                       title: 'Vegan salad bowl',
@@ -95,6 +102,13 @@ class HomeScreen extends StatelessWidget {
                       image: 'assets/food_app/images/image_2.png',
                       kcal: 420,
                       price: 20,
+                      onClick: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<FoodDetailScreen>(
+                            builder: (ctx) => const FoodDetailScreen(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
