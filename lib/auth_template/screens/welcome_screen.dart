@@ -3,6 +3,8 @@ import 'package:flutter_ui_pr/auth_template/consts/colors.dart';
 import 'package:flutter_ui_pr/auth_template/screens/sign_in_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +16,8 @@ class WelcomeScreen extends StatelessWidget {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                      'assets/images/auth_template/person_holding_dough.jpg'),
+                    'assets/auth_template/images/person_holding_dough.jpg',
+                  ),
                   fit: BoxFit.cover,
                 ),
               ),

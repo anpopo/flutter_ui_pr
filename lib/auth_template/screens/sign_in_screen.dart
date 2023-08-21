@@ -18,7 +18,7 @@ class SignInScreen extends StatelessWidget {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      'assets/images/auth_template/person_holding_dough.jpg',
+                      'assets/auth_template/images/person_holding_dough.jpg',
                     ),
                     fit: BoxFit.cover,
                     alignment: Alignment.bottomCenter,
