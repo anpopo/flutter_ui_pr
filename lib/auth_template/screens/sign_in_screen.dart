@@ -17,17 +17,19 @@ class SignInScreen extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(
-                          'assets/images/auth_template/person_holding_dough.jpg'),
-                      fit: BoxFit.cover,
-                      alignment: Alignment.bottomCenter),
+                    image: AssetImage(
+                      'assets/images/auth_template/person_holding_dough.jpg',
+                    ),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.bottomCenter,
+                  ),
                 ),
               ),
             ),
             Expanded(
               flex: 4,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8),
                 child: Column(
                   children: [
                     Row(
@@ -37,14 +39,16 @@ class SignInScreen extends StatelessWidget {
                           'SIGN IN',
                           style: Theme.of(context).textTheme.displaySmall,
                         ),
-                        const Text('SIGN UP',
-                            style: TextStyle(
-                              color: kPrimaryColor,
-                              fontSize: 16,
-                            )),
+                        const Text(
+                          'SIGN UP',
+                          style: TextStyle(
+                            color: kPrimaryColor,
+                            fontSize: 16,
+                          ),
+                        ),
                       ],
                     ),
-                    const Spacer(flex: 1),
+                    const Spacer(),
                     const CustomTextField(
                       hintText: 'Email Address',
                       iconData: Icons.alternate_email,
@@ -58,17 +62,25 @@ class SignInScreen extends StatelessWidget {
                       isObscure: true,
                     ),
                     const Spacer(flex: 3),
-                    const Padding(
-                      padding: EdgeInsets.only(bottom: 32),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 32),
                       child: Row(
                         children: [
-                          CustomButton(iconData: Icons.facebook),
-                          SizedBox(width: 12),
-                          CustomButton(iconData: Icons.chat),
-                          Spacer(),
-                          CustomButton(
-                            iconData: Icons.arrow_forward,
-                            color: kPrimaryColor,
+                          const CustomButton(iconData: Icons.facebook),
+                          const SizedBox(width: 12),
+                          const CustomButton(iconData: Icons.chat),
+                          const Spacer(),
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: kPrimaryColor,
+                            ),
+                            child: const Icon(
+                              Icons.arrow_forward,
+                              color: Colors.black,
+                              size: 16,
+                            ),
                           ),
                         ],
                       ),
