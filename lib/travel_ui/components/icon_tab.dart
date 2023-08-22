@@ -27,7 +27,7 @@ class _IconTabState extends State<IconTab> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(
         _icons.length,
         (index) => _IconTabButton(
